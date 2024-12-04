@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CASP 16 Results</title>
+    <title>CASP16 Pharmaceutical Protein-Ligand Challenge</title>
     <style>
         * {
             margin: 0;
@@ -13,82 +13,66 @@
         }
 
         body {
-            background-color: #f5f5f5;
+            background-color: #f8f9fa;
             min-height: 100vh;
         }
 
         .header {
-            background-color: #2d3748;
+            background-color: #24292e;
             color: white;
-            padding: 1rem;
+            padding: 1.5rem;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 1rem;
+            padding: 0 1rem;
         }
 
         .header-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
+            gap: 2rem;
         }
 
         .header-title {
-            font-size: 1.5rem;
+            font-size: 1.75rem;
             font-weight: 600;
         }
 
+        .header-subtitle {
+            color: #cbd5e0;
+            font-size: 1.1rem;
+            margin-top: 0.5rem;
+        }
+
         .download-button {
-            background-color: #4CAF50;
+            background-color: #2ea44f;
             color: white;
-            padding: 0.5rem 1rem;
+            padding: 0.75rem 1.5rem;
             text-decoration: none;
-            border-radius: 4px;
+            border-radius: 6px;
             transition: background-color 0.3s;
             font-weight: 500;
+            white-space: nowrap;
         }
 
         .download-button:hover {
-            background-color: #45a049;
+            background-color: #2c974b;
         }
 
         .pdf-container {
-            background-color: white;
-            padding: 1rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            margin: 1rem auto;
-            max-width: 1200px;
+            background-color: #2f3437;
+            margin: 0;
+            height: calc(100vh - 90px);
         }
 
         .pdf-viewer {
             width: 100%;
-            height: 800px;
+            height: 100%;
             border: none;
-            border-radius: 4px;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 1rem;
-            color: #666;
-            font-size: 0.9rem;
-            margin-top: 2rem;
-        }
-
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                text-align: center;
-                gap: 1rem;
-            }
-
-            .pdf-viewer {
-                height: 500px;
-            }
         }
     </style>
 </head>
@@ -96,26 +80,21 @@
     <header class="header">
         <div class="container">
             <div class="header-content">
-                <h1 class="header-title">CASP 16 Results Viewer</h1>
+                <div>
+                    <h1 class="header-title">CASP16 Pharmaceutical Protein-Ligand Challenge</h1>
+                    <div class="header-subtitle">Ligand Poses and Affinities</div>
+                </div>
                 <a href="casp16.pdf" class="download-button" download>Download PDF</a>
             </div>
         </div>
     </header>
 
-    <main class="container">
-        <div class="pdf-container">
-            <embed
-                class="pdf-viewer"
-                src="casp16.pdf"
-                type="application/pdf"
-            />
-        </div>
+    <main class="pdf-container">
+        <embed
+            class="pdf-viewer"
+            src="casp16.pdf"
+            type="application/pdf"
+        />
     </main>
-
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 CASP Results. All rights reserved.</p>
-        </div>
-    </footer>
 </body>
 </html>
